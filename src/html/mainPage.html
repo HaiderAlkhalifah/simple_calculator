@@ -5,101 +5,109 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/dist/output.css" rel="stylesheet" />
+    <script src="js\calculator.js" defer></script>
     <title>Calculator</title>
   </head>
   <body class="bg-white grid justify-center">
     <div class="grid m-8">
       <div class="h-[640px] w-[360px] shadow-2xl bg-bg rounded-2xl">
         <div class="grid grid-cols-1 content-evenly">
-          <div class="h-[180px]"></div>
+          <div class="h-[180px] shadow-inner grid p-6 justify-items-start">
+            <div class="grid py-2 content-center text-textm text-2xl">
+              -1 x 10 (-10) + 2
+            </div>
+            <div class="grid font-bold text-5xl content-center text-textm">
+              102
+            </div>
+          </div>
           <div class="grid grid-cols-4 gap-4 justify-evenly py-3 px-5">
             <div class="grid grid-rows-6 gap-3">
               <div
-                class="rounded-full shadow-soft-cardo bg-obtn h-[60px] text-center justify-items-center text-2xl p-3 font-bold text-white"
+                class="rounded-full shadow-soft-cardo bg-obtn h-[60px] text-center justify-items-center text-2xl p-3 font-bold text-white select-none"
               >
                 C
               </div>
               <div
-                class="rounded-full shadow-soft-cardso bg-orange-100 h-[60px] text-center justify-items-center text-xl p-3 font-sm text-orange-400"
+                class="rounded-full shadow-soft-cardso bg-orange-100 h-[60px] text-center justify-items-center text-xl p-3 font-sm text-orange-400 select-none"
               >
-                root
+                √
               </div>
               <div
-                class="rounded-full shadow-soft-card bg-wbtn h-[60px] text-center justify-items-center text-2xl p-3 font-bold text-textm"
+                class="rounded-full shadow-soft-card bg-wbtn h-[60px] text-center justify-items-center text-2xl p-3 font-bold text-textm select-none"
               >
                 7
               </div>
               <div
-                class="rounded-full shadow-soft-card bg-wbtn h-[60px] text-center justify-items-center text-2xl p-3 font-bold text-textm"
+                class="rounded-full shadow-soft-card bg-wbtn h-[60px] text-center justify-items-center text-2xl p-3 font-bold text-textm select-none"
               >
                 4
               </div>
               <div
-                class="rounded-full shadow-soft-card bg-wbtn h-[60px] text-center justify-items-center text-2xl p-3 font-bold text-textm"
+                class="rounded-full shadow-soft-card bg-wbtn h-[60px] text-center justify-items-center text-2xl p-3 font-bold text-textm select-none"
               >
                 1
               </div>
               <div
-                class="rounded-full shadow-soft-card bg-wbtn h-[60px] text-center justify-items-center text-2xl p-3 font-bold text-textm"
+                class="rounded-full shadow-soft-card bg-wbtn h-[60px] text-center justify-items-center text-2xl p-3 font-bold text-textm select-none"
               >
                 .
               </div>
             </div>
             <div class="grid grid-rows-6 gap-3">
               <div
-                class="rounded-full shadow-soft-cardso bg-orange-100 h-[60px] text-center justify-items-center text-lg p-4 font-bold text-orange-300"
+                class="rounded-full shadow-soft-cardso bg-orange-100 h-[60px] text-center justify-items-center text-lg p-4 font-bold text-orange-300 select-none"
               >
                 (
               </div>
               <div
-                class="rounded-full shadow-soft-cardso bg-orange-100 h-[60px] text-center justify-items-center text-lg p-4 font-bold text-orange-300"
+                class="rounded-full shadow-soft-cardso bg-orange-100 h-[60px] text-center justify-items-center text-lg p-4 font-sm text-orange-300 select-none"
               >
                 %
               </div>
               <div
-                class="rounded-full shadow-soft-card bg-wbtn h-[60px] text-center justify-items-center text-2xl p-3 font-bold text-textm"
+                class="rounded-full shadow-soft-card bg-wbtn h-[60px] text-center justify-items-center text-2xl p-3 font-bold text-textm select-none"
               >
                 8
               </div>
               <div
-                class="rounded-full shadow-soft-card bg-wbtn h-[60px] text-center justify-items-center text-2xl p-3 font-bold text-textm"
+                class="rounded-full shadow-soft-card bg-wbtn h-[60px] text-center justify-items-center text-2xl p-3 font-bold text-textm select-none"
               >
                 5
               </div>
               <div
-                class="rounded-full shadow-soft-card bg-wbtn h-[60px] text-center justify-items-center text-2xl p-3 font-bold text-textm"
+                class="rounded-full shadow-soft-card bg-wbtn h-[60px] text-center justify-items-center text-2xl p-3 font-bold text-textm select-none"
               >
                 2
               </div>
               <div
-                class="rounded-full shadow-soft-card bg-wbtn h-[60px] text-center justify-items-center text-2xl p-3 font-bold text-textm"
+                class="rounded-full shadow-soft-card bg-wbtn h-[60px] text-center justify-items-center text-2xl p-3 font-bold text-textm select-none"
               >
                 0
               </div>
             </div>
             <div class="grid grid-rows-6 gap-3">
               <div
-                class="rounded-full shadow-soft-cardso bg-orange-100 h-[60px] text-center justify-items-center text-lg p-4 font-bold text-orange-300"
+                class="rounded-full shadow-soft-cardso bg-orange-100 h-[60px] text-center justify-items-center text-lg p-4 font-bold text-orange-300 select-none"
               >
                 )
               </div>
               <div
-                class="rounded-full shadow-soft-cardso bg-orange-100 h-[60px] text-center jjustify-items-center text-lg p-4 font-bold text-orange-300"
+                class="rounded-full shadow-soft-cardso bg-orange-100 h-[60px] text-center jjustify-items-center text-lg p-4 font-sm text-orange-300 select-none"
               >
                 +/-
               </div>
               <div
-                class="rounded-full shadow-soft-card bg-wbtn h-[60px] text-center justify-items-center text-2xl p-3 font-bold text-textm"
+                class="rounded-full shadow-soft-card bg-wbtn h-[60px] text-center justify-items-center text-2xl p-3 font-bold text-textm select-none"
               >
                 9
               </div>
               <div
-                class="rounded-full shadow-soft-card bg-wbtn h-[60px] text-center justify-items-center text-2xl p-3 font-bold text-textm"
+                class="rounded-full shadow-soft-card bg-wbtn h-[60px] text-center justify-items-center text-2xl p-3 font-bold text-textm select-none"
               >
                 6
               </div>
               <div
-                class="rounded-full shadow-soft-card bg-wbtn h-[60px] text-center justify-items-center text-2xl p-3 font-bold text-textm"
+                class="rounded-full shadow-soft-card bg-wbtn h-[60px] text-center justify-items-center text-2xl p-3 font-bold text-textm select-none"
               >
                 3
               </div>
@@ -142,9 +150,9 @@
                 </svg>
               </div>
               <div
-                class="rounded-full shadow-soft-cardsp bg-purple-100 h-[60px] text-center justify-items-center text-2xl p-3 font-sm text-pbtn"
+                class="rounded-full shadow-soft-cardsp bg-purple-100 h-[60px] text-center justify-items-center text-2xl p-3 font-sm text-pbtn select-none"
               >
-                /
+                ÷
               </div>
               <div
                 class="grid rounded-full shadow-soft-cardsp bg-purple-100 h-[60px] text-center justify-items-center text-2xl content-center font-bold text-pbtn"
@@ -183,7 +191,7 @@
                 </svg>
               </div>
               <div
-                class="rounded-full row-start-5 row-end-6 shadow-soft-cardp bg-pbtn h-[120px] text-center justify-items-center text-4xl py-8 font-bold text-white"
+                class="rounded-full row-start-5 row-end-6 shadow-soft-cardp bg-pbtn h-[120px] text-center justify-items-center text-4xl py-8 font-bold text-white select-none"
               >
                 =
               </div>
