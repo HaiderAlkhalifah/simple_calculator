@@ -4,7 +4,7 @@ const deleteNumber = document.querySelector("[data-delete]");
 const clear = document.querySelector("[data-clear]");
 const calculationDisplay = document.getElementById("calculationDisplay");
 const resultDisplay = document.querySelector("[data-resultDisplay]");
-const equal = document.getElementById("div.equal");
+const equal = document.getElementById("=");
 
 class Calculator {
   constructor(calculationDisplay, resultDisplay) {
@@ -29,13 +29,19 @@ class Calculator {
     this.calculationDisplay.innerText += number;
   }
 
-  operation(operation) {}
+  operation(operation) {
+    console.log("pressed");
 
-  calculations() {}
+    this.calculationDisplay.innerText += operation;
+  }
+
+  calculat() {
+    this.calculationDisplay.innerText;
+  }
 
   display() {
     // this.calculationDisplay.innerText = do wtf you want;
-    this.resultDisplay = this.calculations;
+    this.resultDisplay = this.calculat;
   }
 }
 
@@ -49,7 +55,7 @@ number.forEach((button) => {
 
 operation.forEach((button) => {
   button.addEventListener("click", () => {
-    calculator.addNumber(button.id);
+    calculator.operation(button.id);
   });
 });
 
@@ -62,5 +68,5 @@ deleteNumber.addEventListener("click", () => {
 });
 
 equal.addEventListener("click", () => {
-  calculator.calculations
-})
+  calculator.calculat();
+});
