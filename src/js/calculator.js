@@ -1,5 +1,5 @@
 const number = document.querySelectorAll("[data-number]");
-const operation = document.querySelectorAll("[data-operation]");
+const operations = document.querySelectorAll("[data-operation]");
 const deleteNumber = document.querySelector("[data-delete]");
 const clear = document.querySelector("[data-clear]");
 const calculationDisplay = document.getElementById("calculationDisplay");
@@ -7,9 +7,10 @@ const resultDisplay = document.querySelector("[data-resultDisplay]");
 const equal = document.getElementById("=");
 
 class Calculator {
-  constructor(calculationDisplay, resultDisplay) {
+  constructor(calculationDisplay, resultDisplay, operations) {
     this.calculationDisplay = calculationDisplay;
     this.resultDisplay = resultDisplay;
+    this.operation = operations;
     this.clear();
   }
 
@@ -25,23 +26,44 @@ class Calculator {
     this.calculationDisplay.innerText = text.slice(0, text.length - 1);
   }
 
-  addNumber(number) {
-    this.calculationDisplay.innerText += number;
+  addNumber(txt) {
+    this.calculationDisplay.innerText += txt;
   }
 
-  operation(operation) {
-    console.log("pressed");
+  oper(op) {
+    const text = this.calculationDisplay.innerText;
+    const lastText = text[text.length - 1];
+    for (var i = 0; i < operations.length; i++) {
+      if (operations[i].id == lastText) {
+        return
+      };
+    }
 
-    this.calculationDisplay.innerText += operation;
+    this.calculationDisplay.innerText += op;
   }
-
+  //TODO fix calculat "import parse"
   calculat() {
-    this.calculationDisplay.innerText;
+    const text = this.calculationDisplay.innerText;
+    const lastText = text[text.length - 1];
+
+    for (var i = 0; i < operations.length; i++) {
+      if (operations[i].id == lastText) return;
+    }
+
+    var inner = this.calculationDisplay.innerText;
+    var expression = Parser.parse(inner);
+    for (var i = 0; i <= expression.length; i++) {
+      expression[i] = expression[i].replace("×", "*");
+      expression[i] = expression[i].replace("÷", "/");
+    }
+
+    result = math.eval(expression);
+    this.display(result);
   }
 
-  display() {
+  display(result) {
     // this.calculationDisplay.innerText = do wtf you want;
-    this.resultDisplay = this.calculat;
+    this.resultDisplay.innerText = String(result);
   }
 }
 
@@ -53,9 +75,9 @@ number.forEach((button) => {
   });
 });
 
-operation.forEach((button) => {
+operations.forEach((button) => {
   button.addEventListener("click", () => {
-    calculator.operation(button.id);
+    calculator.oper(button.id);
   });
 });
 
