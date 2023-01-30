@@ -1,15 +1,4 @@
-# 🚀 Welcome to your new awesome project!
+# Simple calculator 
 
-This project has been created using **webpack-cli**, you can now run
 
-```
-npm run build
-```
-
-or
-
-```
-yarn build
-```
-
-to bundle your application
+I made this calculator just to apply what I learned in a course I took (2022)
